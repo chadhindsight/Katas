@@ -5,5 +5,6 @@ const loveLanguage = (partner, weeks) => {
         const love = loves[day % 5];
         love.count += partner.response(love.lang) === 'positive' ? 1 : 0;
     }
+    // Set language based on what the value of count is
     return loves.reduce((a, b) => a.count > b.count ? a : b).lang;
 }
