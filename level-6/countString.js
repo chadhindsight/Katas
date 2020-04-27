@@ -1,8 +1,8 @@
-//Count lowercase letters in a given string and return the letter count
+//Count lowercase letters in a given string and return the letter count as key value pairs
 function letterCount(s) {
-    let res = {}
+    leobj = {}
     // Split and sort the newly converted array and then check occurence of characters 
-    s.split('').sort((a, b) => a - b).forEach(el => res[el] ? res[el]++ : res[el] = 1)
+    s.split('').forEach(el => obj[el] ? obj[el]++ : obj[el] = 1)
 
     return res;
 }
