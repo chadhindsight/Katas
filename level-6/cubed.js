@@ -3,6 +3,7 @@
 function findNb(m) {
     let n = 0;
     let sum = 0;
+    // While sume is less than increase some by n to the exponent of 3
     while (sum < m) {
         n++;
         sum += Math.pow(n, 3);
