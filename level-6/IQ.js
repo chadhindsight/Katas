@@ -11,7 +11,7 @@ function iqTest(numbers) {
     evenArray.push(even)
     let odd = str.filter(x => x % 2 !== 0)
     oddArray.push(odd)
-
+    // +1 because the list is not zero indexed
     return odd.length > even.length ? str.indexOf(even[0]) + 1 : str.indexOf(odd[0]) + 1
     console.log(str.indexOf(odd[0]) + 1)
 }
