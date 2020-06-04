@@ -1,4 +1,4 @@
-// Find longest substring in alphabetical order
+// Find longest substring in alphabetical order!
 function longest(str, max = '') {
     const current = [...str].reduce((acc, char) => (
         char >= acc.slice(-1) ?
