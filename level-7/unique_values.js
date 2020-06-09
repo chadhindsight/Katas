@@ -1,3 +1,4 @@
+// Check the amount of unique values in a string
 function countUniqueValues(arr){
     if(arr.length === 0) return 0;
     var i = 0;
