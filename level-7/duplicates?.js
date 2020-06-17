@@ -9,3 +9,19 @@ function areThereDuplicates() {
     }
     return false;
 }
+
+//DIFFERENT! Remove duplicate members from an array
+function Remove(arr) {
+    let frequencyCounter = {}
+
+    for (let val of arr) {
+        frequencyCounter[val] = (frequencyCounter[val] || 0) + 1
+    }
+    let newArr = []
+    // LOOP OBJECT
+    for (let [deez, val] in frequencyCounter) {
+        if (val != 2) { newArr.push(deez) }
+    }
+    return newArr
+
+}
