@@ -3,6 +3,6 @@ var greet = function (name) {
     let t = name.toLowerCase().slice(0, 1)
     // Get the rest of the string
     let restOfString = name.toLowerCase().slice(1)
-    console.log(rest)
+    
     return `Hello ${t.toUpperCase()}${restOfString}!`
 };
