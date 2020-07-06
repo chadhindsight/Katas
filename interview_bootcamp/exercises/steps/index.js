@@ -17,16 +17,33 @@
 //       '### '
 //       '####'
 
-function steps(n) {
-    // Row
-    for(let row =0; row <n; row ++) {
-        let stair = '';
-        // Column
-        for (let column = 0; column < n; column++){
-            column <= row ? stair += '#' : stair += ' '
-        }
-        console.log(stair)
+// SOLUTION 2. Recurssion
+function steps(n, row = 0, stair = '') {
+    // Base case
+    if (n === row) {
+        return;
     }
+
+    if (n === stair.length) {
+        console.log(stair);
+        return steps(n, row + 1);
+    }
+
+    const add = stair.length <= row ? '#' : ' ';
+    steps(n, row, stair + add);
 }
+
+// SOLUTION 1.
+// function steps(n) {
+//     // Row
+//     for(let row =0; row <n; row ++) {
+//         let stair = '';
+//         // Column
+//         for (let column = 0; column < n; column++){
+//             column <= row ? stair += '#' : stair += ' '
+//         }
+//         console.log(stair)
+//     }
+// }
 
 module.exports = steps;
