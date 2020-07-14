@@ -15,8 +15,8 @@ class Queue {
     }
     
     // Put new data to the front of array
-    add(record){
-        this.data.unshift(record)
+    add(item){
+        this.data.unshift(item)
     }
     // Put new data at the back
     remove() {
