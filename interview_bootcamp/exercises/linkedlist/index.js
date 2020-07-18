@@ -33,16 +33,91 @@ class LinkedList {
     getFirst() {
        return this.head
     }
-    getLast(){
-        let node = this.head
-        //If head is null, linked list is empty
-        if (!this.head ) return null
 
-        while(node) {
-            if(!node.next) {return node}
-            node = node.next
+    getLast() {
+        // Check the value of the head
+        if (!this.head) {
+            return null;
+        }
+
+        let node = this.head;
+        while (node) {
+            if (!node.next) {
+                return node;
+            }
+            node = node.next;
         }
     }
+    clear() {
+        return this.head = null
+    }
+
+    removeFirst() {
+        if (!this.head) {
+            return;
+        }
+
+        this.head = this.head.next;
+    }
+
+    removeLast() {
+        if (!this.head) {
+            return;
+        }
+
+        if (!this.head.next) {
+            this.head = null;
+            return;
+        }
+
+        let previous = this.head;
+        let node = this.head.next;
+        while (node.next) {
+            previous = node;
+            node = node.next;
+        }
+        previous.next = null;
+    }
+
+    insertLast(data) {
+        // create a new node with data and insert it into the very end of our chain
+        const last = this.getLast()
+        if(last) {
+            last.next = new Node(data);
+        } else{
+            // The chain is empty if this runs
+            this.head = new Node(data)
+        }
+    }
+
+    getAt(index) {
+        let counter = 0;
+        let node = this.head;
+        while (node) {
+            if (counter === index) {
+                return node;
+            }
+
+            counter++;
+            node = node.next;
+        }
+        return null;
+    }
+
+   removeAt(i) {
+    if(!this.head){return}
+    // Removing the very first index
+    if(i === 0) {
+        this.head = this.head.next
+        return 
+    }
+    // Find the node right before the one we're trying to remove
+    const previous = this.getAt(i - 1)
+    if(!previous) {
+        return;
+    }
+    previous.next = previous.next.next
+   } 
 }
 
 module.exports = { Node, LinkedList };

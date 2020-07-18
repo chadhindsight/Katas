@@ -39,8 +39,10 @@ function steps(n) {
     // Row
     for(let row =0; row <n; row ++) {
         let stair = '';
-        // Column
-       
+        // Column. Inner loop goes first, then the outer loop
+       for(let col = 0; col <n; col++) {
+           col <= row ? stair += '#' : stair += ' '
+       }
         console.log(stair)
     }
 }

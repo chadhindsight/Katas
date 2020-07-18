@@ -8,7 +8,7 @@
 // Example:
 //   fib(4) === 3
 
-//Iterative. O(n)
+//Iterative. O(n) time
 // function fib(n) {
 //     // Create an array with all numbers up to n
 //     let result =[0,1]
@@ -23,11 +23,28 @@
 //     return result[n]
 // }
 
-// Recursion
+// Recursion with Memoization
+// Write a new func in charge of Memoization and pass old fib as an arg
+function memoize(fn) {
+    const cache = {}
+    // This is the faster function that receives the args passed to 
+    // the slower fib function and it checks if fib was previously called with the args stored
+    // the cache object
+    return function(...args) {
+        if(cache[args]) return cache[args]
+        const result = fn.apply(this, args)
+        // Store the new result in cache
+        cache[args] = result
+        return result;
+    }
+}
+
 function fib(n) {
     if(n < 2) return n
 
     return fib(n -1) + fib(n -2)
 }
+// Call the new memoized fib function
+ fib = memoize(fib) 
 
 module.exports = fib;

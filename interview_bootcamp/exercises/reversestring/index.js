@@ -10,7 +10,7 @@
 //     return str.split('').reverse().join('')
 // }
 
-// SOLUTION 2. Without using reverse method
+// SOLUTION 2. Without using reverse method. 0(n) time
 // function reverse(str) {
 //     let reversed = '';
 
