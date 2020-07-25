@@ -32,6 +32,7 @@ class Tree {
         // Contains a ref to the absolute head of our tree
         this.root = null
     }
+   
     traverseBF(fn){
         const arr = [this.root]
         
@@ -43,6 +44,17 @@ class Tree {
             arr.push(...node.children)
 
             fn(node)
+        }
+    }
+    // Difference is we add to the front instead of the back
+    traverseDF(fn) {
+        const arr = [this.root]
+
+        while(arr.length) {
+            const node = arr.shift()
+            arr.unshift(...node.children)
+
+            fn(node) 
         }
     }
 }
