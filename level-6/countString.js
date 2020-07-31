@@ -1,4 +1,4 @@
-//Count lowercase letters in a given string and return the letter count as key value pairs. so good
+//Count lowercase letters in a given string and return the letter count as key value pairs.xs
 function letterCount(s) {
     let obj = {}
     // Split and sort the newly converted array and then check occurence of characters 
