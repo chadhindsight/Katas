@@ -16,7 +16,7 @@
 //       '##  '
 //       '### '
 //       '####'
-
+// Recursion
 function steps(n, row = 0, stair = '') {
   if (n === row) {
     return;
@@ -33,6 +33,7 @@ function steps(n, row = 0, stair = '') {
 
 module.exports = steps;
 
+// Solution 1
 // function steps(n) {
 //   for (let row = 0; row < n; row++) {
 //     let stair = '';
