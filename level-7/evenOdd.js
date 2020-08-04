@@ -1,7 +1,7 @@
 // Return the difference between even and odd numbers
 function solve(a) {
     //  Loop through and use two seperate vars to track even and odd
-    // Increment when one has to change
+    // Increment 
     let array = a.filter(item => {
         return typeof item === 'number'
     })
