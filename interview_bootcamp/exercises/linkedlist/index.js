@@ -3,7 +3,7 @@
 // See 'directions' document
 
 class Node {
-    // node has two properties
+    // node has two properties!
     constructor(data, next = null) {
         this.data = data
         this.next = next
@@ -11,19 +11,19 @@ class Node {
 }
 
 class LinkedList {
-    constructor(head){
+    constructor(head) {
         this.head = null
     }
     // Assign the resulting node to the head property and put that new node to the front of linked list
-    insertFirst(data){
+    insertFirst(data) {
         this.head = new Node(data, this.head)
     }
     size() {
         //count frequency
         let counter = 0;
         let node = this.head
-        
-        while(node){
+
+        while (node) {
             counter++;
             // if node.next = null then there are no other nodes to check
             node = node.next
@@ -31,7 +31,7 @@ class LinkedList {
         return counter
     }
     getFirst() {
-       return this.head
+        return this.head
     }
 
     getLast() {
@@ -82,9 +82,9 @@ class LinkedList {
     insertLast(data) {
         // create a new node with data and insert it into the very end of our chain
         const last = this.getLast()
-        if(last) {
+        if (last) {
             last.next = new Node(data);
-        } else{
+        } else {
             // The chain is empty if this runs
             this.head = new Node(data)
         }
@@ -104,21 +104,21 @@ class LinkedList {
         return null;
     }
 
-   removeAt(i) {
-    if(!this.head){return}
-    // Removing the very first index
-    if(i === 0) {
-        this.head = this.head.next
-        return 
+    removeAt(i) {
+        if (!this.head) { return }
+        // Removing the very first index
+        if (i === 0) {
+            this.head = this.head.next
+            return
+        }
+        // Find the node right before the one we're trying to remove
+        const previous = this.getAt(i - 1)
+        if (!previous) {
+            return;
+        }
+        previous.next = previous.next.next
     }
-    // Find the node right before the one we're trying to remove
-    const previous = this.getAt(i - 1)
-    if(!previous) {
-        return;
-    }
-    previous.next = previous.next.next
-   } 
- 
+
     insertAt(data, index) {
         if (!this.head) {
             this.head = new Node(data);
@@ -148,7 +148,7 @@ class LinkedList {
     *[Symbol.iterator]() {
         let node = this.head
 
-        while(node) {
+        while (node) {
             yield node
             node = node.next
         }
