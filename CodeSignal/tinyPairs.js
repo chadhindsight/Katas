@@ -16,4 +16,4 @@ function countTiny(first, second, val) {
 
 
 countTiny([1, 2, 3], [1, 2, 3], 31)
-// Output should be number of pairs
+// Output should be the number of pairs
