@@ -19,9 +19,10 @@ function countTiny(firstArr, secondArr, val) {
         let pair = parseInt("" + firstArr[i] + secondArr[keyB])
         if (pair < val) { tinyPairs++ }
     }
-    console.log(tinyPairs)
+    // string template not needed in actual code signal test
+    console.log(`the number of pairs is ${tinyPairs}`)
 }
 
 
 countTiny(arr1, arr2, 743)
-// Output should be number of pairs
+// Output should be the number of pairs
