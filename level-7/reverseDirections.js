@@ -1,5 +1,5 @@
 // In this Kata, you will be given directions and your task will be to find your way back
-
+// Reverse
 function solve(arr) {
     let j = arr.length - 1
     //use substring to get last part of str
