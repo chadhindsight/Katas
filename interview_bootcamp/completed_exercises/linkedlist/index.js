@@ -35,6 +35,7 @@ class LinkedList {
   }
 
   getLast() {
+    // edge case
     if (!this.head) {
       return null;
     }
