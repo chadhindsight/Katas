@@ -8,5 +8,9 @@ function solution(value) {
         ass.unshift(0)
     }
     return `Value is ${ass.join('')}`
+}
 
+// Alternate slolution
+function solution(value) {
+    return "Value is " + ("00000" + value).slice(-5);
 }
