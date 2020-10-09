@@ -3,7 +3,7 @@
 // representation of its ASCII value consists of more zeros than ones.
 
 function moreZeros(s) {
-    //remove duplicates
+    //remove duplicates and solve
     let arr = s.split('').filter((val, i, arr) => arr.indexOf(val) === i).
         filter((x, index, arr) => {
             //Check if it has more zeroes than ones  
