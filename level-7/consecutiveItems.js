@@ -13,3 +13,8 @@ function consecutive(arr, a, b) {
     }
     return false
 }
+
+// More Clever Solution
+function consecutive(arr, a, b) {
+    return Math.abs(arr.indexOf(a) - arr.indexOf(b)) == 1;
+}
