@@ -65,7 +65,7 @@ class LinkedList {
     if (!this.head) {
       return;
     }
-
+    // If there's only one element
     if (!this.head.next) {
       this.head = null;
       return;
@@ -110,7 +110,7 @@ class LinkedList {
     if (!this.head) {
       return;
     }
-
+    // Remove the head if it matches index
     if (index === 0) {
       this.head = this.head.next;
       return;
