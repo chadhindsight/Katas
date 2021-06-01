@@ -20,7 +20,7 @@
 //     return reversed
 // }
 
-// SOLUTION 3. With .reduce()
+// SOLUTION 3. With .reduce() method
 function reverse(str) {
    debugger
    return str.split('').reduce((rev, character) => character + rev, '');
