@@ -21,8 +21,9 @@
 // }
 
 // SOLUTION 3. With .reduce()
- function reverse(str) {
-    return str.split('').reduce((rev, character)=> character  + rev,'');
- }
-
+function reverse(str) {
+   debugger
+   return str.split('').reduce((rev, character) => character + rev, '');
+}
+reverse('ass')
 module.exports = reverse;
