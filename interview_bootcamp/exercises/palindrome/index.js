@@ -5,16 +5,18 @@
 // and punctuation in determining if the string is a palindrome.
 
 // SOLUTION 1.
-// function palindrome(str) {
-//     const rev = str.split('').reverse().join('')
-//     return str === rev;
-// }
+function palindrome(str) {
+    // Make a new str that consists of the original in reverse order and compare to original
+    const newStr = str.split('').reverse().join('')
+
+    return newStr === str
+}
 
 //SOLUTION 2. Using every() method. Not as good because of double comparison.
-function palindrome(str) {
-    return str.split('').every((char, i) => {
-        return char === str[str.length -i - 1]
-    });
-};
+// function palindrome(str) {
+//     return str.split('').every((char, i) => {
+//         return char === str[str.length -i - 1]
+//     });
+// };
 
 module.exports = palindrome;
