@@ -7,12 +7,11 @@
 // SOLUTION 1.
 function palindrome(str) {
     // Make a new str that consists of the original in reverse order and compare to original
-    const newStr = str.split('').reverse().join('')
-
-    return newStr === str
+    const reversedStr = str.split('').reverse().join('')
+    return reversedStr === str
 }
 
-//SOLUTION 2. Using every() method. Not as good because of double comparison.
+// SOLUTION 2. Using every() method. Not as good because of double comparison.
 // function palindrome(str) {
 //     return str.split('').every((char, i) => {
 //         return char === str[str.length -i - 1]
