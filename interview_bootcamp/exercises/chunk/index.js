@@ -18,14 +18,15 @@
 //     }
 //     return chunked
 // }
+
 // SOLUTION 2
 function chunk(array, size) {
     const chunked = [];
     let index = 0
-    while(index < array.length) {
+    while (index < array.length) {
         let valuesFromArray = array.slice(index, index + size)
         chunked.push(valuesFromArray)
-        index +=size
+        index += size
     }
     return chunked
 }
