@@ -14,7 +14,7 @@
 //       ' ### '
 //       '#####'
 
-// SOLUTION 2. Recursion!
+// SOLUTION 2 with Recursion
 function pyramid(n, row = 0, level = '') {
     if (row === n) {
         return;
@@ -34,24 +34,10 @@ function pyramid(n, row = 0, level = '') {
     pyramid(n, row, level + add);
 }
 
- // Solution 1
-// function pyramid(n) {
-//   const midpoint = Math.floor((2 * n - 1) / 2);
+// Solution 1
+function pyramid(n) {
 
-//   for (let row = 0; row < n; row++) {
-//     let level = '';
-
-//     for (let column = 0; column < midpoint; column++) {
-//       if (midpoint - row <= column && midpoint + row >= column) {
-//         level += '#';
-//       } else {
-//         level += ' ';
-//       }
-//     }
-
-//     console.log(level);
-//   }
-// }
+}
 
 
 module.exports = pyramid;
