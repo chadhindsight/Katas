@@ -7,19 +7,17 @@
 
 //SOLUTION. Frequency counter
 function maxChar(str) {
-    let max = 0;
-    let maxChar = 0;
+    let chars = {}
+    let max = 0
 
-    const chars = {};
-
-    for(let letter of str) {
-        chars[letter] = (chars[letter] || 0 + 1);
+    for (let letter of str) {
+        chars[letter] = (chars[letter] || + 1);
     }
 
-    for(let char in chars) {
-        chars[char] > max ? max = maxChar = char : chars[char] 
+    for (let val in chars) {
+        chars[val] > max ? max = val : chars[val]
     }
-    return maxChar
+    return max
 }
 
 module.exports = maxChar;

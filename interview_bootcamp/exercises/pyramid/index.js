@@ -15,28 +15,43 @@
 //       '#####'
 
 // SOLUTION 2 with Recursion
-function pyramid(n, row = 0, level = '') {
-    if (row === n) {
-        return;
-    }
-    if (level.length === 2 * n - 1) {
-        console.log(level);
-        return pyramid(n, row + 1);
-    }
+// function pyramid(n, row = 0, level = '') {
+//     if (row === n) {
+//         return;
+//     }
+//     if (level.length === 2 * n - 1) {
+//         console.log(level);
+//         return pyramid(n, row + 1);
+//     }
 
-    const midpoint = Math.floor((2 * n - 1) / 2);
-    let add;
-    if (midpoint - row <= level.length && midpoint + row >= level.length) {
-        add = '#';
-    } else {
-        add = ' ';
-    }
-    pyramid(n, row, level + add);
-}
+//     const midpoint = Math.floor((2 * n - 1) / 2);
+//     let add;
+//     if (midpoint - row <= level.length && midpoint + row >= level.length) {
+//         add = '#';
+//     } else {
+//         add = ' ';
+//     }
+//     pyramid(n, row, level + add);
+// }
 
-// Solution 1
+// Solution 1 
 function pyramid(n) {
+    for (let row = 0; row < n; row++) {
+        let level = "";
+        // Find the limit of columns to iterate up to which is n * 2 - 1
+        let limit = n * 2 - 1;
+        const midpoint = Math.floor(limit / 2)
 
+        // figure out if a given column should have a '#'
+        for (let col = 0; col < limit; col++) {
+            if (midpoint - row <= col && midpoint + row >= col) {
+                level += "#"
+            }
+            else {
+                level += " "
+            }
+        }
+    }
 }
 
 

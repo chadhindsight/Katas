@@ -23,7 +23,7 @@
 // //     if (n === row) {
 // //         return;
 // //     }
-    
+
 // //     if (n === stair.length) {
 // //         console.log(stair);
 // //         return steps(n, row + 1);
@@ -37,12 +37,12 @@
 // SOLUTION 1.
 function steps(n) {
     // Row
-    for(let row =0; row <n; row ++) {
+    for (let row = 0; row < n; row++) {
         let stair = '';
         // Column. Inner loop goes first, then the outer loop
-       for(let col = 0; col <n; col++) {
-           col <= row ? stair += '#' : stair += ' '
-       }
+        for (let col = 0; col < n; col++) {
+            col <= row ? stair += '#' : stair += ' '
+        }
         console.log(stair)
     }
 }
