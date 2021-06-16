@@ -18,10 +18,10 @@
 function matrix(n) {
     // NB: The last number to print is n ** 2
 
-    // Build out empty array
+    // Build an empty array that will hold spiral results
     const results = []
 
-    for(let i = 0; i < n; i++) {
+    for (let i = 0; i < n; i++) {
         results.push([])
     }
     // Counter keeps track of what num to push into array
@@ -58,7 +58,7 @@ function matrix(n) {
             results[i][startColumn] = counter;
             counter++;
         }
-    startColumn++
+        startColumn++
     }
     return results
 }
