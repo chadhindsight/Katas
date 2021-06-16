@@ -19,6 +19,7 @@ function matrix(n) {
     // NB: The last number to print is n ** 2
 
     // Build an empty array that will hold spiral results
+    //  We can assign values to any index in an arr
     const results = []
 
     for (let i = 0; i < n; i++) {
