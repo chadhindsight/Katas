@@ -25,7 +25,7 @@ function matrix(n) {
     for (let i = 0; i < n; i++) {
         results.push([])
     }
-    // Counter keeps track of what num to push into array
+    // Counter keeps track of what num to push into array.
     let counter = 1
     let startColumn = 0
     let endColumn = n - 1
@@ -36,21 +36,21 @@ function matrix(n) {
         // Top row
         for (let i = startColumn; i <= endColumn; i++) {
             results[startRow][i] = counter;
-            counter++;
+            counter++
         }
         startRow++;
 
         // Right column
         for (let i = startRow; i <= endRow; i++) {
-            results[i][endColumn] = counter;
-            counter++;
+            results[i][endColumn] = counter
+            counter++
         }
         endColumn--;
 
         // Bottom row
-        for (let i = endColumn; i >= startColumn; i--) {
+        for (let i = endRow; i >= startRow; i--) {
             results[endRow][i] = counter;
-            counter++;
+            counter++
         }
         endRow--;
 
@@ -59,7 +59,7 @@ function matrix(n) {
             results[i][startColumn] = counter;
             counter++;
         }
-        startColumn++
+        startColumn++;
     }
     return results
 }
