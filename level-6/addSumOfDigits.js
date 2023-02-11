@@ -3,10 +3,10 @@ var getLucky = function (s, k) {
     const alpha = "abcdefghijklmnopqrstuvwxyz"
     let tempStr = ""
     // a hash to store letter:number as key value pairs
-    let hash = {}
+    let strHash = {}
 
     for (let i = 0; i < alpha.length; i++) {
-        hash[alpha[i]] = i + 1
+        strHash[alpha[i]] = i + 1
     }
 
     // Loop through the given input string and add the corresponding value from our hash
