@@ -18,7 +18,7 @@ class Queue {
     add(item){
         this.data.unshift(item)
     }
-    // Put new data at the back
+
     remove() {
         return this.data.pop()
     }

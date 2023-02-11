@@ -25,7 +25,7 @@ class Node {
             return node.data !== data;
         });
     }
-}
+} 
 
 class Tree {
     constructor() {
@@ -46,7 +46,7 @@ class Tree {
             fn(node)
         }
     }
-    // Difference is we add to the front instead of the back
+    // Difference is we add to the front instead 
     traverseDF(fn) {
         const arr = [this.root]
 

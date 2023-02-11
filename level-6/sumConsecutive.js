@@ -5,7 +5,7 @@ function sumConsecutives(s) {
         sums = [];
     for (var i = 0; i < s.length; i++) {
         sum += s[i];
-        if (s[i] != s[i + 1]) {
+        if (s[i] !== s[i + 1]) {
             sums.push(sum);
             sum = 0;
         }
