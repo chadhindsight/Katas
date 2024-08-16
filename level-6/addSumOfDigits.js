@@ -34,16 +34,13 @@ var getLucky = function (s, k) {
 
 // Alternate
 // var getLucky = function (s, k) {
-//     let resultingNums = []
+//     let sum = '';
 
-//     // Convert each letter to its position in the alphabet
+//     // Convert each letter to its position in the alphabet and concatenate as a string
 //     for (let i = 0; i < s.length; i++) {
 //         let value = s[i].charCodeAt();
-//         resultingNums.push((value - 97) + 1);
+//         sum += (value - 97) + 1;
 //     }
-
-//     // Calculate the sum of all positions
-//     let sum = resultingNums.join(''); // Convert array to string and then join to handle multi-digit numbers as concatenation
 
 //     // Perform the digit sum transformation k times
 //     for (let i = 0; i < k; i++) {
