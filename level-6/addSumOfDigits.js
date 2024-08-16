@@ -31,3 +31,24 @@ var getLucky = function (s, k) {
     }
     return res
 };
+
+// Alternate
+// var getLucky = function (s, k) {
+//     let resultingNums = []
+
+//     // Convert each letter to its position in the alphabet
+//     for (let i = 0; i < s.length; i++) {
+//         let value = s[i].charCodeAt();
+//         resultingNums.push((value - 97) + 1);
+//     }
+
+//     // Calculate the sum of all positions
+//     let sum = resultingNums.join(''); // Convert array to string and then join to handle multi-digit numbers as concatenation
+
+//     // Perform the digit sum transformation k times
+//     for (let i = 0; i < k; i++) {
+//         sum = sum.split('').reduce((x, y) => parseInt(x) + parseInt(y), 0).toString();
+//     }
+
+//     return parseInt(sum);
+// };
